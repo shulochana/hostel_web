@@ -1,0 +1,287 @@
+{% load static%}
+<!DOCTYPE html>
+<!--
+Template Name: Lalapeden
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html lang="">
+<head>
+<title>Lalapeden</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html"><B>DSI HOSTELS</B></a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="index">Home</a></li>
+        <!--<li><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Dropdown</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Level 2</a></li>
+          </ul>
+        </li> !-->
+        {%if user.is_authenticated %}
+        <li><a href="logout">Logout</a></li>
+        {% else %}
+        <li><a href="login">Login</a></li>
+        <!--<li><a href="#">Link Text</a></li>-->
+        {%endif%}
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style = "background-image:url( ' /static/images/demo/DDD.jpg' );">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+
+      <h2 class="heading">DAYANANDA SAGAR INSTITUTIONS</h2>
+      <p>DSI provides world class infrastructure with a wide range of facilities </p>
+      <footer><!--<a class="btn" href="table">Porttitor</a>--></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">SEATS AVAILABLE</h6>
+    </div>
+    <ul class="nospace group services">
+      <li class="one_third first">
+        <article class="infobox">
+          <h6 class="heading">{%if user.is_authenticated %} <a href="table">TOTAL </a> {%else%} <a href="login">TOTAL</a>{%endif%}</h6>
+          <p>Filled:{{stu}}
+            <br> Empty:{{stu1}}
+          </p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="infobox">
+          <h6 class="heading"> <a href="shar">SHARADA</a></h6>
+          <p>Filled:{{count1}} <br> Empty:{{c1}}</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="infobox">
+          <h6 class="heading"> <a href="nel">NELSON MANDELA</a></h6>
+          <p>Filled:{{count2}}<br>Empty:{{c2}}</p>
+        </article>
+      </li>
+      <!--<li class="one_third first">
+        <article class="infobox">
+          <h6 class="heading"><i class="fa fa-mixcloud"></i> <a href="#">Sollicitudin</a></h6>
+          <p>Aenean porta vestibulum blandit pede pellentesque ac ipsum vel massa imperdiet [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="infobox">
+          <h6 class="heading"><i class="fa fa-bug"></i> <a href="#">Facilisis</a></h6>
+          <p>Semper donec mi odio vehicula vel euismod vel suscipit at velit suspendisse lacinia [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="infobox">
+          <h6 class="heading"><i class="fa fa-pied-piper-alt"></i> <a href="#">Adipiscing</a></h6>
+          <p>In diam aenean erat orci mollis quis gravida sed mollis a quam nullam justo massa [&hellip;]</p>
+        </article>
+      </li>
+    </ul>-->
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="flexslider testimonials">
+      <ul class="slides">
+        <li>
+          <article><img class="circle" src="static/images/demo/NRI.jpeg" alt="">
+            <h6 class="heading">NRI HOSTELS</h6>
+          </article>
+        </li>
+        <li>
+          <article><img class="circle" src="static/images/demo/shar.jpeg" alt="">
+            <h6 class="heading">SHARADA WORKING WOMENS' HOSTEL</h6>
+          </article>
+        </li>
+        <li>
+          <article><img class="circle" src="static/images/demo/circle.jpeg" alt="">
+            <h6 class="heading">SHARADA WORKING WOMENS' HOSTEL</h6>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!--<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <div class="sectiontitle">
+      <h6 class="heading">Meet the Staff</h6>
+      <p>Donec accumsan ligula vitae magna mauris neque phasellus.</p>
+    </div>
+    <ul class="nospace group elements">
+      <li class="one_third first">
+        <article><a href="#"><i class="fa fa-clipboard"></i></a>
+          <h6 class="heading">Justo pellentesque</h6>
+          <p>Quis iaculis scelerisque diam nisl pulvinar risus at fringilla sem augue in nulla [&hellip;]</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-skyatlas"></i></a>
+          <h6 class="heading">Orci vitae vehicula</h6>
+          <p>Morbi semper metus ac pulvinar adipiscing dui justo gravida arcu et venenatis justo [&hellip;]</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-empire"></i></a>
+          <h6 class="heading">Auctor luctus diam</h6>
+          <p>Lacus ut nisi maecenas ultrices neque a nisl nunc lorem diam rhoncus aliquet sit [&hellip;]</p>
+          <footer><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </li>
+    </ul>
+  
+    <div class="clear"></div>
+  </section>
+</div>-->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Meet the Staff</h6>
+      <p>Our extremely hard working hostel staff</p>
+    </div>
+    <ul class="nospace group">
+      <li class="one_half first">
+        <article class="group">
+          <div class="one_half first"><a href="#"><img src="{% static 'images/demo/Capture.png' %}" alt=""></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Warden</h3>
+            <p>Ms. Chandini has been a part of DSI hostels for over 10 years and has played a major role in the development of the Hostels</p>
+          </div>
+        </article>
+      </li>
+      <li class="one_half">
+        <article class="group">
+          <div class="one_half first"><a href="#"><img src="{% static 'images/demo/Capture.png' %}" alt=""></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Supervisor</h3>
+            <p>Ms. Usha is known for her friendly nature with the students. She makes sure the well being of each student in the hostels</p>
+            
+          </div>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">DAYANANDA SAGAR INSTITUTIONS</h6>
+    <p>Contact Us</p>
+    <p>Address:Shavige Malleshwara Hills,<br>
+      Kumaraswamy, Bangalore- 560078,<br>
+      Karnataka, India.</p>
+    <ul class="faico clear">
+      <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+      <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+    </ul>
+  <!--<nav>
+      <ul class="nospace">
+        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </nav>-->
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.flexslider-min.js' %}"></script>
+</body>
+</html>

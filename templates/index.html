@@ -9,7 +9,7 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-<title>Lalapeden</title>
+<title>DSI hostels</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
@@ -97,13 +97,13 @@ Licence URI: http://www.os-templates.com/template-terms
       </li>
       <li class="one_third">
         <article class="infobox">
-          <h6 class="heading"> <a href="shar">SHARADA</a></h6>
+          <h6 class="heading"> {%if user.is_authenticated %}<a href="shar">SHARADA</a>{%else%}<a href="login">SHARADA</a>{%endif%}</h6>
           <p>Filled:{{count1}} <br> Empty:{{c1}}</p>
         </article>
       </li>
       <li class="one_third">
         <article class="infobox">
-          <h6 class="heading"> <a href="nel">NELSON MANDELA</a></h6>
+          <h6 class="heading">{%if user.is_authenticated %} <a href="nel">NELSON MANDELA</a>{%else%}<a href="login">NELSON MANDELA</a>{%endif%}</h6>
           <p>Filled:{{count2}}<br>Empty:{{c2}}</p>
         </article>
       </li>
